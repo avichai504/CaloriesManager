@@ -1,0 +1,25 @@
+{
+  "name": "caloriesmanager",
+  "version": "1.0.0",
+  "description": "Node Web Services HIT fial project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avichai504/CaloriesManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avichai504/CaloriesManager/issues"
+  },
+  "homepage": "https://github.com/avichai504/CaloriesManager#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "uuid": "^10.0.0"
+  }
+}
