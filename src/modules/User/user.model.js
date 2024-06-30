@@ -1,22 +1,28 @@
+//Avichai Gal Or 207051848
+//Nitzan Azbel 311489470
+
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
+    id: {
       type: String,
       required: true,
     },
-    email: {
+    first_name: {
       type: String,
       required: true,
-      unique: true,
     },
-    password: {
+    last_name: {
       type: String,
+      required: true,
+    },
+    birthday: {
+      type: Date,
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true,}
 );
 
 const User = mongoose.model("User", userSchema);

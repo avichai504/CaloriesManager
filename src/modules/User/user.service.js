@@ -1,11 +1,11 @@
-import { User } from "./user.model.js";
-
-const getAllUsers = async () => {
-  return await User.find();
-};
+//Avichai Gal Or 207051848
+//Nitzan Azbel 311489470import { User } from "./user.model.js";
 
 const getUserById = async (id) => {
-  return await User.findById(id);
+  debugger;
+  return await User.findOne({
+    id,
+  });
 };
 
 const createUser = async (userData) => {
@@ -13,12 +13,4 @@ const createUser = async (userData) => {
   return await user.save();
 };
 
-const updateUser = async (id, userData) => {
-  return await User.findByIdAndUpdate(id, userData, { new: true });
-};
-
-const deleteUser = async (id) => {
-  return await User.findByIdAndDelete(id);
-};
-
-export { getAllUsers, getUserById, createUser, updateUser, deleteUser };
+export { getUserById, createUser };

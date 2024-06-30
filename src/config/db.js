@@ -1,3 +1,6 @@
+//Avichai Gal Or 207051848
+//Nitzan Azbel 311489470
+
 import mongoose from "mongoose";
 
 const connect = async () => {
