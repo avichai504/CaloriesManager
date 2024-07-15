@@ -1,5 +1,5 @@
-//Avichai Gal Or 207051848
-//Nitzan Azbel 311489470
+// Avichai Gal Or 207051848
+// Nitzan Azbel 311489470
 
 import { Calorie } from "./calorie.model.js";
 

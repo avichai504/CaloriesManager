@@ -1,11 +1,16 @@
-//Avichai Gal Or 207051848
-//Nitzan Azbel 311489470
+// Avichai Gal Or 207051848
+// Nitzan Azbel 311489470
 
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+// Initialize dotenv
+dotenv.config();
 
 const connect = async () => {
   try {
-    await mongoose.connect("mongodb+srv://mongodbuser:T53Tv0zKHaSej6ru@cluster0.r86tsdp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+    const dbUri = process.env.MONGODB_URI;
+    await mongoose.connect(dbUri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
