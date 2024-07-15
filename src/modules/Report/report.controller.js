@@ -1,5 +1,5 @@
-//Avichai Gal Or 207051848
-//Nitzan Azbel 311489470
+// Avichai Gal Or 207051848
+// Nitzan Azbel 311489470
 
 import * as reportService from "./report.service.js";
 import { Router } from "express";
@@ -87,6 +87,7 @@ const router = Router();
  *         description: Internal server error
  */
 router.get("/report", async (req, res) => {
+  console.log("\n Report Controller Loaded \n");
   try {
     const { user_id, year, month } = req.query;
     const report = await reportService.getMonthlyReport(user_id, parseInt(year), parseInt(month));

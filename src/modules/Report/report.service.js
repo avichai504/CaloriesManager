@@ -1,9 +1,10 @@
-//Avichai Gal Or 207051848
-//Nitzan Azbel 311489470
+// Avichai Gal Or 207051848
+// Nitzan Azbel 311489470
 
 import { Calorie } from "../Calorie/calorie.model.js";
 
 export const getMonthlyReport = async (user_id, year, month) => {
+  console.log(`user_id: ${user_id}, year: ${year}, month: ${month}`);
   const report = await Calorie.aggregate([
     {
       $match: {

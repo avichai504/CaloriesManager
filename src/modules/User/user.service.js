@@ -1,5 +1,7 @@
-//Avichai Gal Or 207051848
-//Nitzan Azbel 311489470import { User } from "./user.model.js";
+// Avichai Gal Or 207051848
+// Nitzan Azbel 311489470
+
+import { User } from "./user.model.js";
 
 const getUserById = async (id) => {
   debugger;
