@@ -3,41 +3,24 @@
 
 import { Router } from "express";
 
+//Create a new router object to handle routes.
 const router = Router();
 
 /**
- * @swagger
- * /about:
- *   get:
- *     summary: Get information about the developers
- *     tags: [About]
- *     responses:
- *       200:
- *         description: Developer information fetched successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 type: object
- *                 properties:
- *                   firstname:
- *                     type: string
- *                   lastname:
- *                     type: string
- *                   id:
- *                     type: number
- *                   email:
- *                     type: string
- *       500:
- *         description: Internal server error
+ * Define a GET route for the /about endpoint.
+ * This route retrieves information about developers.
  */
 router.get("/about", async (req, res) => {
   console.log("GET /about");
   try {
+    // Array of developer objects with their details
     const developers = [
-      { firstname: "Avichai", lastname: "Gal-Or", id: 207051848, email: "avichai504@gmail.com" },
-      { firstname: "Nitzan", lastname: "Azbel", id: 311489470, email: "167nitzan@gmail.com" }
+      {
+        firstname: "Avichai", lastname: "Gal-Or", id: 207051848, email: "avichai504@gmail.com",
+      },
+      {
+        firstname: "Nitzan", lastname: "Azbel", id: 311489470, email: "167nitzan@gmail.com",
+      },
     ];
     res.status(200).json(developers);
   } catch (error) {
