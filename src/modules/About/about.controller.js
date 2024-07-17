@@ -1,5 +1,6 @@
 // Avichai Gal Or 207051848
 // Nitzan Azbel 311489470
+// src/modules/About/about.controller.js
 
 import { Router } from "express";
 
@@ -16,10 +17,16 @@ router.get("/about", async (req, res) => {
     // Array of developer objects with their details
     const developers = [
       {
-        firstname: "Avichai", lastname: "Gal-Or", id: 207051848, email: "avichai504@gmail.com",
+        firstname: "avichai",
+        lastname: "gal-or",
+        id: 207051848,
+        email: "avichai504@gmail.com",
       },
       {
-        firstname: "Nitzan", lastname: "Azbel", id: 311489470, email: "167nitzan@gmail.com",
+        firstname: "nitzan",
+        lastname: "azbel",
+        id: 311489470,
+        email: "167nitzan@gmail.com",
       },
     ];
     res.status(200).json(developers);

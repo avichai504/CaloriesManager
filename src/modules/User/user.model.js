@@ -1,8 +1,10 @@
 // Avichai Gal Or 207051848
 // Nitzan Azbel 311489470
+// src/modules/User/user.model.js
 
 import mongoose from "mongoose";
 
+// Define the schema for the User model
 const userSchema = new mongoose.Schema(
   {
     id: {
@@ -22,9 +24,10 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true,}
+  { timestamps: true }
 );
 
+// Create the User model using the defined schema
 const User = mongoose.model("User", userSchema);
 
 export { User };
